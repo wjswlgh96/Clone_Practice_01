@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import Login from './components/Login'
 import MyPage from './components/MyPage'
 import SignUp from './components/SignUp'
@@ -9,10 +9,19 @@ import { BrowserRouter, Route, HashRouter } from 'react-router-dom';
 function App() {
 
   const [isLogin, setLogin] = useState(false);
+  const [accessToken, setAccessToken] = useState('');
 
-
-  function ChangeLogin() {
+  function SuccessLogin(data) {
     setLogin(true);
+    setAccessToken(data);
+  }
+
+  function LogOut() {
+    setLogin(false);
+  }
+
+  function refreshAccessToken(data) {
+    setAccessToken(data);
   }
 
   return (
@@ -20,13 +29,13 @@ function App() {
       <HashRouter>
         <div className="App">
           {isLogin ?
-            <Route path="/MyPage" component={MyPage}></Route> :
-            <Route path="/" exact={true} component={Login}></Route>
+            <MyPage accessToken={accessToken} LogOut={LogOut} refreshAccessToken={refreshAccessToken} /> :
+            <Route path="/" exact={true} render={() => <Login SuccessLogin={SuccessLogin} />}></Route>
           }
         </div>
-        <Route path="/SignUp" ChangeLogin={ChangeLogin} component={SignUp}></Route>
+        <Route path="/SignUp" component={SignUp}></Route>
       </HashRouter>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 

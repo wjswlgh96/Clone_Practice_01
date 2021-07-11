@@ -66,6 +66,14 @@ html {
   margin: 5px auto 0;
 }
 
+.mypage_access_button {
+  margin: 10px;
+}
+
+.mypage_refresh_button {
+  margin: 10px;
+}
+
 .mypage_logout_button {
 margin: 10px;
 }

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import React from "react";
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
 // 회원가입 페이지
@@ -44,7 +44,7 @@ function SignUp() {
                 <input id="signup_input_name" type="text" />
             </span><br />
             <span className="signup_password">비밀번호
-                <input id="signup_input_password" type="text" />
+                <input id="signup_input_password" type="password" />
             </span><br />
             <span className="signup_email">이메일
                 <input id="signup_input_email" type="text" />

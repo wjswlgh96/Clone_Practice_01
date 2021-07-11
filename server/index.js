@@ -3,6 +3,7 @@ const fs = require("fs");
 const https = require("https");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+
 const express = require("express");
 const app = express();
 
@@ -18,8 +19,11 @@ app.use(
     })
 );
 app.use(cookieParser());
+
 app.post("/login", controllers.login);
 app.post("/signup", controllers.signup);
+app.get("/accesstokenrequest", controllers.accessTokenRequest);
+app.get("/refreshtokenrequest", controllers.refreshTokenRequest);
 
 const HTTPS_PORT = 4000;
 
@@ -39,4 +43,5 @@ if (fs.existsSync("./key.pem") && fs.existsSync("./cert.pem")) {
 } else {
     server = app.listen(HTTPS_PORT)
 }
+
 module.exports = server;
