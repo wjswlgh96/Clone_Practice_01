@@ -27,7 +27,7 @@
     "@mochajs/json-file-reporter": "^1.3.0",
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
-    "nodemon": "^2.0.6",
+    "nodemon": "^2.0.12",
     "sequelize-cli": "^6.2.0",
     "supertest": "^6.0.1"
   }

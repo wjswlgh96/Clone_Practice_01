@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
-import Login from './components/login'
+import React, { Component, useState } from 'react';
+import Login from './components/Login'
+import MyPage from './components/MyPage'
 
 import './App.css';
 
 function App() {
+
+  const [isLogin, setLogin] = useState(false);
+
   return (
     <div className="App">
-      <Login />
+      {isLogin ?
+        <MyPage /> :
+        <Login />}
     </div>
   );
 }

@@ -1,3 +1,75 @@
+html { 
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+} 
+
 .App {
   text-align: center;
+}
+
+/*! Login CSS */
+.login_container {
+  display: block;
+  
+}
+
+.login_title {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.login_email {
+  font-size: 17px;
+}
+
+.login_email_input {
+  margin: 5px;
+  margin-bottom: 0;
+}
+
+.login_password { 
+  font-size: 17px;
+}
+
+.login_password_input {
+  margin: 5px;
+  margin-bottom: 0;
+}
+
+a {
+  
+}
+
+.login_button {
+  margin: 12px;
+}
+
+/*! MyPage CSS */
+
+.mypage_title {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 20px;
+  text-align: center;
+}
+
+.mypage_userId   {
+  font-size: 14px;
+  margin: 5px auto 0;
+}
+
+.mypage_userEmail {
+  font-size: 14px;
+  margin: 5px auto 0;
+}
+
+.mypage_userPhone {
+  font-size: 14px;
+  margin: 5px auto 0;
+}
+
+.mypage_logout_button {
+margin: 10px;
 }
