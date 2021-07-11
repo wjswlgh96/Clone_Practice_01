@@ -38,10 +38,6 @@ html {
   margin-bottom: 0;
 }
 
-a {
-  
-}
-
 .login_button {
   margin: 12px;
 }
@@ -72,4 +68,17 @@ a {
 
 .mypage_logout_button {
 margin: 10px;
+}
+
+/*! SignUp CSS */
+
+.signup_container {
+  text-align: center;
+}
+
+.signup_title {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 20px;
+  text-align: center;
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 
 // 현재 들어와야 하는 props 는 유저의 데이터
+// 내 정보 페이지
 function MyPage() {
     return (
         <div className="mypage_container">
