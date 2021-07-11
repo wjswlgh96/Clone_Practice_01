@@ -5,8 +5,6 @@ module.exports = (req, res) => {
 
     const refreshToken = req.cookies.refreshToken;
 
-    console.log("req.cookies.refreshToken:", req.cookies.refreshToken);
-
     if (!refreshToken) {
         res.status(400).json({ "data": null, "message": "refresh token not provided" });
     } else {
