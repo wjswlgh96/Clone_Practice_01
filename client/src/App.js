@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import axios from 'axios';
+import Login from './components/login'
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-
+      <Login />
     </div>
   );
 }
